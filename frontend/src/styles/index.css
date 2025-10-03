@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .glass-card {
+    @apply glass rounded-2xl p-6 shadow-xl;
+  }
+  
+  /* Gradient button */
+  .btn-gradient {
+    @apply bg-gradient-primary text-white font-semibold py-3 px-6 rounded-lg
+           shadow-lg hover:shadow-xl transform hover:-translate-y-0.5
+           transition-all duration-300 ease-in-out;
+  }
+  
+  /* MBTI letter cards */
+  .mbti-letter {
+    @apply w-16 h-16 flex items-center justify-center text-2xl font-bold
+           rounded-xl shadow-lg transform transition-all duration-300
+           hover:scale-110 hover:rotate-3;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent;
+  }
+}
