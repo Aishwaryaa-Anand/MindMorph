@@ -1,10 +1,11 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './contexts/AuthContext';
-import ProtectedRoute from './components/auth/ProtectedRoute';
-import Login from './components/auth/Login';
-import Signup from './components/auth/Signup';
-import Home from './pages/Home';
-import QuestionnaireTest from './pages/questionnaire/Test';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
+import Home from "./pages/Home";
+import QuestionnaireTest from "./pages/questionnaire/Test";
+import QuestionnaireResult from "./pages/questionnaire/Result";
 
 function App() {
   return (
@@ -30,6 +31,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <QuestionnaireTest />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/questionnaire/result/:id"
+            element={
+              <ProtectedRoute>
+                <QuestionnaireResult />
               </ProtectedRoute>
             }
           />

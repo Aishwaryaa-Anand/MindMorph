@@ -93,7 +93,7 @@ def get_results():
     except Exception as e:
         return jsonify({'error': f'Failed to load results: {str(e)}'}), 500
 
-@bp.route('/result/:id', methods=['GET'])
+@bp.route('/result/<id>', methods=['GET'])
 @jwt_required()
 def get_result_by_id(id):
     """Get specific result by ID"""
