@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "dimension": "IE",
+    "scenario": "After a long week at work or school, you have the weekend free. Your ideal way to recharge is to:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Spend time alone reading, watching movies, or pursuing solo hobbies",
+        "value": "I",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Have a quiet dinner or coffee with one or two close friends",
+        "value": "I",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Organize or attend a group gathering, party, or social event",
+        "value": "E",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "dimension": "IE",
+    "scenario": "In a classroom or meeting setting, when asked to discuss ideas:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "You prefer to think through your response before speaking",
+        "value": "I",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "You sometimes speak up but usually after considering your thoughts",
+        "value": "I",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "You naturally think out loud and enjoy verbal brainstorming",
+        "value": "E",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "dimension": "IE",
+    "scenario": "You're invited to a networking event where you don't know many people. You:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Feel drained by the idea and would prefer to skip it",
+        "value": "I",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Go but stick to talking with a few people you connect with",
+        "value": "I",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Get energized by meeting new people and making connections",
+        "value": "E",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "dimension": "IE",
+    "scenario": "When facing a personal problem or challenge, you typically:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Process it internally before talking to anyone",
+        "value": "I",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Think it through alone but may discuss with someone close",
+        "value": "I",
+        "weight": 2
+      },
+      {
+        "label": "C",
+        "text": "Talk it through with others to clarify your thoughts",
+        "value": "E",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "dimension": "IE",
+    "scenario": "Your phone rings with an unexpected call from a friend. Your first reaction is:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Slight reluctance - you'd rather text or respond later",
+        "value": "I",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Neutral - depends on your mood and the friend",
+        "value": "I",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Excitement - you enjoy spontaneous conversations",
+        "value": "E",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "dimension": "NS",
+    "scenario": "When learning something new (like a software tool or recipe), you prefer to:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Follow step-by-step instructions carefully",
+        "value": "S",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Get the basics then experiment to learn more",
+        "value": "S",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Understand the big picture first, then figure out the details",
+        "value": "N",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "dimension": "NS",
+    "scenario": "When someone explains a concept to you, you understand it better through:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Concrete examples and real-world applications",
+        "value": "S",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "A mix of examples and underlying principles",
+        "value": "S",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Theories, patterns, and how it connects to other ideas",
+        "value": "N",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "dimension": "NS",
+    "scenario": "When planning a vacation, you focus more on:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Specific activities, accommodations, and logistics",
+        "value": "S",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Key highlights while leaving room for spontaneity",
+        "value": "S",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "The overall experience, new perspectives, and possibilities",
+        "value": "N",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "dimension": "NS",
+    "scenario": "In conversations, you're more interested in:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Facts, details, and what actually happened",
+        "value": "S",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Both the story and its meaning",
+        "value": "S",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Implications, meanings, and what could be",
+        "value": "N",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "dimension": "NS",
+    "scenario": "When making decisions, you rely more on:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Past experiences and proven methods",
+        "value": "S",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "A combination of experience and intuition",
+        "value": "S",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Your gut feeling and future possibilities",
+        "value": "N",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "dimension": "TF",
+    "scenario": "A friend asks for honest feedback on their work. You:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Give direct, objective criticism focused on improvement",
+        "value": "T",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Balance honesty with encouragement",
+        "value": "T",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Emphasize positives first, then gently suggest changes",
+        "value": "F",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "dimension": "TF",
+    "scenario": "When making an important life decision, you prioritize:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Logic, efficiency, and objective analysis",
+        "value": "T",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Both rational factors and personal values",
+        "value": "T",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "How it affects people and aligns with your values",
+        "value": "F",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "dimension": "TF",
+    "scenario": "A colleague is upset about a work situation. Your instinct is to:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Help them analyze the problem and find solutions",
+        "value": "T",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Listen empathetically then offer practical advice",
+        "value": "T",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Provide emotional support and validate their feelings",
+        "value": "F",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "dimension": "TF",
+    "scenario": "In a disagreement, you're more focused on:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Who's logically correct and finding the truth",
+        "value": "T",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Understanding both perspectives fairly",
+        "value": "T",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Maintaining harmony and understanding feelings",
+        "value": "F",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "dimension": "TF",
+    "scenario": "You feel proudest when people see you as:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Competent, logical, and fair",
+        "value": "T",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Both capable and considerate",
+        "value": "T",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Caring, understanding, and supportive",
+        "value": "F",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "dimension": "JP",
+    "scenario": "Your approach to daily tasks and responsibilities is:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Make a to-do list and work through it systematically",
+        "value": "J",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Have a general plan but stay flexible",
+        "value": "J",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Handle things as they come up, based on mood and energy",
+        "value": "P",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "dimension": "JP",
+    "scenario": "When working on a project with a deadline:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Start early and work steadily according to a schedule",
+        "value": "J",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Plan to start early but sometimes work in bursts",
+        "value": "J",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Work best under pressure close to the deadline",
+        "value": "P",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "dimension": "JP",
+    "scenario": "Your living or workspace tends to be:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Organized with everything in its designated place",
+        "value": "J",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Mostly organized with occasional clutter",
+        "value": "J",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Flexible organization - organized chaos that makes sense to you",
+        "value": "P",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "dimension": "JP",
+    "scenario": "When plans change unexpectedly, you typically:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Feel frustrated and need time to adjust",
+        "value": "J",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Feel slightly uncomfortable but adapt reasonably well",
+        "value": "J",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Easily go with the flow and embrace the change",
+        "value": "P",
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "dimension": "JP",
+    "scenario": "When making weekend plans with friends:",
+    "choices": [
+      {
+        "label": "A",
+        "text": "Prefer to decide and confirm plans several days ahead",
+        "value": "J",
+        "weight": 3
+      },
+      {
+        "label": "B",
+        "text": "Like having a general idea but keep some flexibility",
+        "value": "J",
+        "weight": 1
+      },
+      {
+        "label": "C",
+        "text": "Prefer to decide spontaneously based on how you feel",
+        "value": "P",
+        "weight": 3
+      }
+    ]
+  }
+]

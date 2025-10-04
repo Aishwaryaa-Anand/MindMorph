@@ -1,0 +1,322 @@
+{
+  "INTJ": {
+    "best_matches": ["ENFP", "ENTP", "INFJ"],
+    "compatibility": {
+      "ENFP": {
+        "score": 95,
+        "why": "ENFPs bring warmth and spontaneity that balances INTJ's structured approach. Both value deep intellectual connection and future-oriented thinking.",
+        "challenges": "INTJ's need for planning may clash with ENFP's spontaneity. Communication about emotional needs is crucial."
+      },
+      "ENTP": {
+        "score": 90,
+        "why": "Shared love of ideas and intellectual debates. Both enjoy strategic thinking and innovative problem-solving.",
+        "challenges": "Both can be argumentative. Need to balance debate with emotional connection."
+      },
+      "INFJ": {
+        "score": 88,
+        "why": "Deep intuitive understanding and shared vision for the future. Both value independence and meaningful conversation.",
+        "challenges": "Both can be stubborn in their convictions. May need to work on expressing emotions openly."
+      }
+    }
+  },
+  "INTP": {
+    "best_matches": ["ENTJ", "ENFJ", "INFJ"],
+    "compatibility": {
+      "ENTJ": {
+        "score": 92,
+        "why": "Complementary strengths - INTP provides analysis, ENTJ provides execution. Both value competence and logical thinking.",
+        "challenges": "ENTJ's directness may feel harsh to INTP. Need to balance thinking with emotional awareness."
+      },
+      "ENFJ": {
+        "score": 87,
+        "why": "ENFJ's warmth draws out INTP's social side. INTP provides logical perspective to ENFJ's decisions.",
+        "challenges": "Different social needs. ENFJ may feel INTP is too detached emotionally."
+      },
+      "INFJ": {
+        "score": 85,
+        "why": "Deep intellectual and philosophical connection. Both enjoy exploring abstract ideas and theories.",
+        "challenges": "Both may struggle with practical daily matters. Need to ground theoretical discussions in action."
+      }
+    }
+  },
+  "ENTJ": {
+    "best_matches": ["INTP", "INFP", "ENFP"],
+    "compatibility": {
+      "INTP": {
+        "score": 92,
+        "why": "INTP's analytical skills complement ENTJ's leadership. Both respect competence and intellectual capability.",
+        "challenges": "ENTJ may be too controlling for INTP's need for autonomy. Communication about decision-making is key."
+      },
+      "INFP": {
+        "score": 88,
+        "why": "INFP softens ENTJ's intensity while ENTJ helps INFP take action on their ideals. Strong mutual growth potential.",
+        "challenges": "Very different decision-making styles. ENTJ must respect INFP's values-based approach."
+      },
+      "ENFP": {
+        "score": 86,
+        "why": "ENFP brings creativity and optimism to ENTJ's plans. Both are energetic and goal-oriented.",
+        "challenges": "ENTJ's directness may hurt ENFP's feelings. Need to balance efficiency with emotional consideration."
+      }
+    }
+  },
+  "ENTP": {
+    "best_matches": ["INTJ", "INFJ", "ENTJ"],
+    "compatibility": {
+      "INTJ": {
+        "score": 90,
+        "why": "Intellectual powerhouse combination. Both enjoy debating ideas and strategic planning.",
+        "challenges": "Both can be argumentative. Need to know when to stop debating and start connecting emotionally."
+      },
+      "INFJ": {
+        "score": 89,
+        "why": "INFJ provides depth and insight while ENTP brings energy and innovation. Complementary cognitive functions.",
+        "challenges": "ENTP's constant change may stress INFJ's need for closure. Balance spontaneity with stability."
+      },
+      "ENTJ": {
+        "score": 85,
+        "why": "Both are ambitious and enjoy strategic thinking. High-energy dynamic with mutual respect.",
+        "challenges": "Power struggles possible. Need to respect each other's autonomy and decision-making."
+      }
+    }
+  },
+  "INFJ": {
+    "best_matches": ["ENFP", "ENTP", "INTJ"],
+    "compatibility": {
+      "ENFP": {
+        "score": 94,
+        "why": "Natural golden pair. ENFP's warmth and authenticity matches INFJ's depth. Both value meaningful connection and personal growth.",
+        "challenges": "ENFP's scattered energy may frustrate INFJ's need for closure. Communication about planning is important."
+      },
+      "ENTP": {
+        "score": 89,
+        "why": "Intellectual and creative synergy. ENTP challenges INFJ's perspectives while respecting their depth.",
+        "challenges": "ENTP's debating style may feel insensitive to INFJ. Balance logic with emotional awareness."
+      },
+      "INTJ": {
+        "score": 88,
+        "why": "Deep mutual understanding through shared intuition. Both value independence and meaningful conversation.",
+        "challenges": "Both can be private and withdrawn. Need to actively share feelings and stay connected."
+      }
+    }
+  },
+  "INFP": {
+    "best_matches": ["ENFJ", "ENTJ", "INFJ"],
+    "compatibility": {
+      "ENFJ": {
+        "score": 93,
+        "why": "Natural golden pair. ENFJ's warmth and structure helps INFP actualize their ideals. Deep emotional understanding.",
+        "challenges": "ENFJ may try to 'fix' INFP who just needs understanding. Respect each other's processing styles."
+      },
+      "ENTJ": {
+        "score": 88,
+        "why": "ENTJ helps INFP take action while INFP softens ENTJ's intensity. Growth-oriented dynamic.",
+        "challenges": "Very different decision-making approaches. ENTJ must value INFP's feelings-based decisions."
+      },
+      "INFJ": {
+        "score": 85,
+        "why": "Deep emotional and idealistic connection. Both value authenticity and meaningful relationships.",
+        "challenges": "Both may avoid conflict. Need to address issues directly rather than withdrawing."
+      }
+    }
+  },
+  "ENFP": {
+    "best_matches": ["INFJ", "INTJ", "ENFJ"],
+    "compatibility": {
+      "INFJ": {
+        "score": 94,
+        "why": "Natural golden pair. INFJ provides depth and insight while ENFP brings enthusiasm and warmth. Authentic connection.",
+        "challenges": "ENFP's scattered energy may stress INFJ. Balance spontaneity with follow-through."
+      },
+      "INTJ": {
+        "score": 95,
+        "why": "Perfect balance of warmth and logic. ENFP softens INTJ while INTJ grounds ENFP. Mutual growth catalyst.",
+        "challenges": "Different social needs and planning styles. Compromise on structure and social time."
+      },
+      "ENFJ": {
+        "score": 87,
+        "why": "Both are warm, people-oriented, and idealistic. Natural understanding and emotional connection.",
+        "challenges": "Both may over-commit to others. Need boundaries and focus on the relationship."
+      }
+    }
+  },
+  "ENFJ": {
+    "best_matches": ["INFP", "ISFP", "INTP"],
+    "compatibility": {
+      "INFP": {
+        "score": 93,
+        "why": "Natural golden pair. ENFJ's leadership helps INFP manifest their ideals. Deep emotional resonance.",
+        "challenges": "ENFJ may be too directive. Need to let INFP maintain autonomy and decision-making."
+      },
+      "ISFP": {
+        "score": 89,
+        "why": "ENFJ provides structure and encouragement for ISFP's creativity. ISFP helps ENFJ stay present and authentic.",
+        "challenges": "Different energy levels and social needs. Balance group activities with quiet time."
+      },
+      "INTP": {
+        "score": 87,
+        "why": "ENFJ draws out INTP's social side while INTP provides logical perspective. Complementary strengths.",
+        "challenges": "Very different decision-making styles. ENFJ must respect INTP's need for logical analysis."
+      }
+    }
+  },
+  "ISTJ": {
+    "best_matches": ["ESFP", "ESTP", "ISFJ"],
+    "compatibility": {
+      "ESFP": {
+        "score": 91,
+        "why": "Natural golden pair. ESFP brings spontaneity and fun while ISTJ provides stability and reliability.",
+        "challenges": "Different approaches to planning and structure. Compromise on spontaneity vs. routine."
+      },
+      "ESTP": {
+        "score": 88,
+        "why": "ESTP's action-orientation complements ISTJ's planning. Both value practical results.",
+        "challenges": "ESTP's risk-taking may stress ISTJ. Balance adventure with security."
+      },
+      "ISFJ": {
+        "score": 85,
+        "why": "Shared values of tradition, loyalty, and responsibility. Stable, supportive partnership.",
+        "challenges": "Both may resist change. Need to encourage each other to try new experiences."
+      }
+    }
+  },
+  "ISFJ": {
+    "best_matches": ["ESFP", "ESTP", "ISTJ"],
+    "compatibility": {
+      "ESFP": {
+        "score": 92,
+        "why": "Natural golden pair. ESFP brings warmth and adventure while ISFJ provides care and stability.",
+        "challenges": "Different social energy levels. Balance ESFP's social needs with ISFJ's quieter preferences."
+      },
+      "ESTP": {
+        "score": 89,
+        "why": "ESTP's boldness encourages ISFJ to try new things. ISFJ provides emotional support and grounding.",
+        "challenges": "ESTP may seem too impulsive to ISFJ. Communicate about risk-taking and planning."
+      },
+      "ISTJ": {
+        "score": 85,
+        "why": "Shared appreciation for tradition, duty, and stability. Reliable and committed partnership.",
+        "challenges": "Both may avoid emotional expression. Work on sharing feelings openly."
+      }
+    }
+  },
+  "ESTJ": {
+    "best_matches": ["ISFP", "ISTP", "ESFJ"],
+    "compatibility": {
+      "ISFP": {
+        "score": 90,
+        "why": "Natural golden pair. ISFP's adaptability balances ESTJ's structure. ESTJ provides stability for ISFP's creativity.",
+        "challenges": "Very different decision-making styles. ESTJ must value ISFP's feelings-based approach."
+      },
+      "ISTP": {
+        "score": 87,
+        "why": "Both are practical and action-oriented. ISTP's technical skills complement ESTJ's organizational abilities.",
+        "challenges": "ESTJ may be too controlling for ISTP's need for autonomy. Respect independence."
+      },
+      "ESFJ": {
+        "score": 84,
+        "why": "Shared values of duty, tradition, and community. Both are organized and responsible.",
+        "challenges": "Both can be stubborn. Need to practice flexibility and compromise."
+      }
+    }
+  },
+  "ESFJ": {
+    "best_matches": ["ISFP", "ISTP", "ESTJ"],
+    "compatibility": {
+      "ISFP": {
+        "score": 91,
+        "why": "Natural golden pair. ESFJ's warmth and structure support ISFP's creative pursuits. Caring dynamic.",
+        "challenges": "ESFJ may try to organize ISFP too much. Respect ISFP's need for spontaneity."
+      },
+      "ISTP": {
+        "score": 88,
+        "why": "ESFJ brings social warmth while ISTP provides practical problem-solving. Complementary skills.",
+        "challenges": "Different social needs. Balance ESFJ's social activities with ISTP's need for alone time."
+      },
+      "ESTJ": {
+        "score": 84,
+        "why": "Both value tradition, responsibility, and organization. Efficient and stable partnership.",
+        "challenges": "Both may prioritize duty over emotional connection. Make time for relationship nurturing."
+      }
+    }
+  },
+  "ISTP": {
+    "best_matches": ["ESFJ", "ESTJ", "ESTP"],
+    "compatibility": {
+      "ESFJ": {
+        "score": 88,
+        "why": "Natural golden pair. ESFJ's warmth draws out ISTP's social side. ISTP provides practical solutions.",
+        "challenges": "Different emotional expression styles. ESFJ needs more verbal affirmation than ISTP naturally gives."
+      },
+      "ESTJ": {
+        "score": 87,
+        "why": "Both are pragmatic and action-oriented. Efficient partnership with mutual respect for skills.",
+        "challenges": "Both may avoid emotional discussions. Work on expressing feelings and needs."
+      },
+      "ESTP": {
+        "score": 85,
+        "why": "Shared love of action and adventure. Both are adaptable and present-focused.",
+        "challenges": "Both may avoid long-term planning. Balance spontaneity with future considerations."
+      }
+    }
+  },
+  "ISFP": {
+    "best_matches": ["ENFJ", "ESFJ", "ESTJ"],
+    "compatibility": {
+      "ENFJ": {
+        "score": 89,
+        "why": "Natural golden pair. ENFJ encourages ISFP's self-expression while ISFP helps ENFJ stay authentic and present.",
+        "challenges": "ENFJ may be too directive. ISFP needs freedom to explore and make own decisions."
+      },
+      "ESFJ": {
+        "score": 91,
+        "why": "ESFJ provides warmth and structure that helps ISFP thrive. ISFP brings spontaneity and creativity.",
+        "challenges": "Different planning styles. Balance structure with flexibility."
+      },
+      "ESTJ": {
+        "score": 90,
+        "why": "ESTJ's organization supports ISFP's creative pursuits. ISFP softens ESTJ's intensity.",
+        "challenges": "Very different communication styles. ESTJ must respect ISFP's feelings-based decisions."
+      }
+    }
+  },
+  "ESTP": {
+    "best_matches": ["ISFJ", "ISTJ", "ESFP"],
+    "compatibility": {
+      "ISFJ": {
+        "score": 89,
+        "why": "Natural golden pair. ISFJ provides emotional support and stability while ESTP brings excitement and energy.",
+        "challenges": "ESTP's risk-taking may stress ISFJ. Communicate about comfort zones and boundaries."
+      },
+      "ISTJ": {
+        "score": 88,
+        "why": "Both are practical and results-oriented. ISTJ's planning balances ESTP's spontaneity.",
+        "challenges": "Different approaches to structure. Compromise on planning ahead vs. going with the flow."
+      },
+      "ESFP": {
+        "score": 86,
+        "why": "High-energy, fun-loving dynamic. Both enjoy action and living in the moment.",
+        "challenges": "Both may avoid serious planning. Need to address practical responsibilities together."
+      }
+    }
+  },
+  "ESFP": {
+    "best_matches": ["ISTJ", "ISFJ", "ESTP"],
+    "compatibility": {
+      "ISTJ": {
+        "score": 91,
+        "why": "Natural golden pair. ISTJ provides stability and structure while ESFP brings warmth and spontaneity.",
+        "challenges": "Different social needs and planning styles. Balance routine with adventure."
+      },
+      "ISFJ": {
+        "score": 92,
+        "why": "ISFJ's caring nature pairs well with ESFP's warmth. Both value helping others and creating harmony.",
+        "challenges": "ESFP may overwhelm ISFJ socially. Respect each other's energy levels."
+      },
+      "ESTP": {
+        "score": 86,
+        "why": "Both are energetic, spontaneous, and enjoy living in the moment. Fun and adventurous partnership.",
+        "challenges": "Both may struggle with long-term planning and emotional depth. Work on these together."
+      }
+    }
+  }
+}

@@ -1,7 +1,9 @@
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
 
   const modules = [
     {
@@ -67,7 +69,13 @@ export default function Home() {
           {modules.map((module, index) => (
             <button
               key={index}
-              onClick={() => alert(`${module.title} - Coming in Day 2!`)}
+              onClick={() => {
+                if (module.route === '/questionnaire') {
+                  navigate('/questionnaire/test');
+                } else {
+                  alert(`${module.title} - Coming soon!`);
+                }
+              }}  
               className="group glass-card hover:scale-105 transition-all duration-300 text-left"
             >
               {/* Icon */}

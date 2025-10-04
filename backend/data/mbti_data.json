@@ -1,0 +1,466 @@
+{
+  "INTJ": {
+    "title": "The Architect",
+    "description": "Strategic, analytical, and independent thinkers who see possibilities for improvement everywhere. INTJs value competence and efficiency, and work to achieve their vision with determination.",
+    "percentage": "2-4% of population",
+    "strengths": ["Strategic thinking", "Independent", "Determined", "High standards", "Original"],
+    "weaknesses": ["Overly analytical", "Dismissive of emotions", "Can seem arrogant", "Impatient with inefficiency"],
+    "careers": [
+      "Software Architect",
+      "Data Scientist",
+      "Investment Banker",
+      "Management Consultant",
+      "Research Scientist",
+      "Systems Engineer"
+    ],
+    "study_habits": [
+      "Prefer independent study with minimal supervision",
+      "Excel at creating structured learning plans",
+      "Focus on understanding underlying principles rather than memorization",
+      "Work best in quiet, distraction-free environments"
+    ],
+    "hobbies": ["Chess", "Strategic games", "Reading non-fiction", "Programming", "Building systems"],
+    "famous_people": ["Elon Musk", "Mark Zuckerberg", "Isaac Newton", "Michelle Obama"],
+    "growth_tips": [
+      "Practice expressing emotions and recognizing others' feelings",
+      "Be patient with people who don't think as quickly or strategically",
+      "Share your vision with others instead of keeping it internal",
+      "Balance perfectionism with practical progress"
+    ]
+  },
+  "INTP": {
+    "title": "The Logician",
+    "description": "Innovative thinkers with an endless thirst for knowledge. INTPs are imaginative and analytical, always seeking to understand the underlying principles of the world around them.",
+    "percentage": "3-5% of population",
+    "strengths": ["Analytical", "Original", "Open-minded", "Curious", "Objective"],
+    "weaknesses": ["Disconnected from practical matters", "Insensitive", "Absent-minded", "Procrastination"],
+    "careers": [
+      "Software Developer",
+      "Physicist",
+      "Mathematician",
+      "Philosophy Professor",
+      "Game Designer",
+      "Research Analyst"
+    ],
+    "study_habits": [
+      "Learn best through exploration and experimentation",
+      "Excel at understanding complex theories",
+      "May struggle with routine tasks and deadlines",
+      "Need intellectual stimulation to stay engaged"
+    ],
+    "hobbies": ["Theoretical discussions", "Gaming", "Reading sci-fi", "Solving puzzles", "Coding"],
+    "famous_people": ["Albert Einstein", "Bill Gates", "Charles Darwin", "Tina Fey"],
+    "growth_tips": [
+      "Practice following through on practical tasks",
+      "Engage with people emotionally, not just intellectually",
+      "Set deadlines and stick to them",
+      "Share your ideas before they're perfect"
+    ]
+  },
+  "ENTJ": {
+    "title": "The Commander",
+    "description": "Bold, imaginative, and strong-willed leaders who always find a way forward. ENTJs are natural-born leaders who excel at organizing people and resources to achieve their goals.",
+    "percentage": "2-5% of population",
+    "strengths": ["Efficient", "Energetic", "Self-confident", "Strategic", "Charismatic"],
+    "weaknesses": ["Stubborn", "Intolerant", "Impatient", "Arrogant", "Cold"],
+    "careers": [
+      "CEO/Executive",
+      "Entrepreneur",
+      "Lawyer",
+      "Investment Banker",
+      "Management Consultant",
+      "Project Manager"
+    ],
+    "study_habits": [
+      "Goal-oriented and deadline-driven",
+      "Excel in leadership roles in group projects",
+      "Prefer efficiency and practical application",
+      "May rush through details to reach conclusions"
+    ],
+    "hobbies": ["Business ventures", "Leadership activities", "Strategy games", "Public speaking", "Networking"],
+    "famous_people": ["Steve Jobs", "Margaret Thatcher", "Gordon Ramsay", "Charlize Theron"],
+    "growth_tips": [
+      "Listen to others' perspectives before deciding",
+      "Be patient with those who work at different paces",
+      "Value emotional intelligence as much as logical efficiency",
+      "Take time to appreciate the journey, not just the destination"
+    ]
+  },
+  "ENTP": {
+    "title": "The Debater",
+    "description": "Quick, clever, and curious thinkers who love intellectual challenges. ENTPs are innovative problem-solvers who enjoy exploring new ideas and possibilities.",
+    "percentage": "3-4% of population",
+    "strengths": ["Knowledgeable", "Quick thinker", "Original", "Charismatic", "Energetic"],
+    "weaknesses": ["Argumentative", "Insensitive", "Intolerant", "Difficulty focusing", "Dislike routine"],
+    "careers": [
+      "Entrepreneur",
+      "Marketing Director",
+      "Inventor",
+      "Software Developer",
+      "Lawyer",
+      "Management Consultant"
+    ],
+    "study_habits": [
+      "Excel at brainstorming and generating ideas",
+      "May struggle with follow-through on projects",
+      "Learn best through debate and discussion",
+      "Need variety to stay engaged"
+    ],
+    "hobbies": ["Debating", "Entrepreneurship", "Traveling", "Innovation projects", "Social experiments"],
+    "famous_people": ["Mark Twain", "Adam Savage", "Sacha Baron Cohen", "Celine Dion"],
+    "growth_tips": [
+      "Follow through on your many ideas instead of constantly starting new ones",
+      "Be sensitive to others' feelings during debates",
+      "Develop patience for routine but necessary tasks",
+      "Listen to understand, not just to respond"
+    ]
+  },
+  "INFJ": {
+    "title": "The Advocate",
+    "description": "Quiet yet inspiring idealists who have a deep sense of integrity and are driven by their values. INFJs seek meaning in everything and work to help others reach their potential.",
+    "percentage": "1-3% of population (rarest type)",
+    "strengths": ["Creative", "Insightful", "Principled", "Passionate", "Altruistic"],
+    "weaknesses": ["Sensitive to criticism", "Perfectionistic", "Private", "Burn out easily"],
+    "careers": [
+      "Counselor/Therapist",
+      "Writer",
+      "Human Rights Advocate",
+      "Psychologist",
+      "Teacher",
+      "Non-profit Director"
+    ],
+    "study_habits": [
+      "Connect learning to personal meaning and values",
+      "Excel at understanding complex human behavior",
+      "Prefer depth over breadth",
+      "Need quiet time to process information"
+    ],
+    "hobbies": ["Writing", "Counseling others", "Reading", "Art", "Volunteering"],
+    "famous_people": ["Nelson Mandela", "Martin Luther King Jr.", "Mother Teresa", "Oprah Winfrey"],
+    "growth_tips": [
+      "Don't take criticism personally - separate yourself from your ideas",
+      "Set boundaries to avoid burnout from helping others",
+      "Share your insights instead of keeping them private",
+      "Accept that not everything can be perfect"
+    ]
+  },
+  "INFP": {
+    "title": "The Mediator",
+    "description": "Poetic, kind, and altruistic, always eager to help a good cause. INFPs are guided by their values and seek to understand themselves and others on a deep level.",
+    "percentage": "4-5% of population",
+    "strengths": ["Empathetic", "Creative", "Open-minded", "Passionate", "Idealistic"],
+    "weaknesses": ["Overly idealistic", "Self-critical", "Impractical", "Difficult to know", "Take things personally"],
+    "careers": [
+      "Writer/Author",
+      "Graphic Designer",
+      "Psychologist",
+      "Social Worker",
+      "Musician",
+      "Counselor"
+    ],
+    "study_habits": [
+      "Need to connect learning to personal values",
+      "Excel in creative and expressive assignments",
+      "May struggle with rigid structures and deadlines",
+      "Learn best in supportive, non-competitive environments"
+    ],
+    "hobbies": ["Creative writing", "Art", "Music", "Helping others", "Exploring nature"],
+    "famous_people": ["J.R.R. Tolkien", "William Shakespeare", "Princess Diana", "Johnny Depp"],
+    "growth_tips": [
+      "Balance idealism with practical action steps",
+      "Don't be so hard on yourself - embrace imperfection",
+      "Share your creative work even if it feels incomplete",
+      "Set healthy boundaries in relationships"
+    ]
+  },
+  "ENFP": {
+    "title": "The Campaigner",
+    "description": "Enthusiastic, creative, and sociable free spirits who can always find a reason to smile. ENFPs are energized by possibilities and passionate about making meaningful connections.",
+    "percentage": "7-8% of population",
+    "strengths": ["Enthusiastic", "Creative", "Sociable", "Energetic", "Empathetic"],
+    "weaknesses": ["Overthinking", "Get stressed easily", "Overly emotional", "Difficulty focusing", "Poor practical skills"],
+    "careers": [
+      "Marketing Manager",
+      "Journalist",
+      "Actor",
+      "Counselor",
+      "Event Planner",
+      "Public Relations Specialist"
+    ],
+    "study_habits": [
+      "Excel in group projects and collaborative learning",
+      "Need variety and creativity to stay engaged",
+      "May struggle with repetitive tasks and details",
+      "Learn best through hands-on experience"
+    ],
+    "hobbies": ["Meeting new people", "Creative projects", "Traveling", "Performing", "Social causes"],
+    "famous_people": ["Robin Williams", "Ellen DeGeneres", "Robert Downey Jr.", "Jennifer Aniston"],
+    "growth_tips": [
+      "Follow through on commitments instead of chasing new possibilities",
+      "Develop organizational systems to manage your energy",
+      "Take time to recharge even though you love being social",
+      "Focus on completing projects before starting new ones"
+    ]
+  },
+  "ENFJ": {
+    "title": "The Protagonist",
+    "description": "Charismatic and inspiring leaders who are passionate about helping others realize their potential. ENFJs are natural teachers and mentors driven by genuine care for people.",
+    "percentage": "2-5% of population",
+    "strengths": ["Charismatic", "Altruistic", "Natural leaders", "Reliable", "Inspiring"],
+    "weaknesses": ["Overly idealistic", "Too selfless", "Sensitive to criticism", "Difficulty making tough decisions"],
+    "careers": [
+      "Teacher",
+      "HR Manager",
+      "Life Coach",
+      "Non-profit Director",
+      "Politician",
+      "Corporate Trainer"
+    ],
+    "study_habits": [
+      "Excel in leadership and mentoring roles",
+      "Prefer collaborative learning environments",
+      "Connect learning to helping others",
+      "May over-commit to group responsibilities"
+    ],
+    "hobbies": ["Community organizing", "Mentoring", "Public speaking", "Teaching", "Event planning"],
+    "famous_people": ["Barack Obama", "Oprah Winfrey", "Maya Angelou", "Jennifer Lawrence"],
+    "growth_tips": [
+      "Learn to say no - you can't help everyone",
+      "Make decisions based on logic too, not just harmony",
+      "Take care of your own needs, not just others'",
+      "Accept that not everyone will appreciate your help"
+    ]
+  },
+  "ISTJ": {
+    "title": "The Logistician",
+    "description": "Practical and fact-minded individuals whose reliability cannot be doubted. ISTJs are responsible organizers driven by their dedication to duty and tradition.",
+    "percentage": "11-14% of population",
+    "strengths": ["Honest", "Direct", "Strong-willed", "Dutiful", "Practical"],
+    "weaknesses": ["Stubborn", "Insensitive", "Judgmental", "Resistant to change"],
+    "careers": [
+      "Accountant",
+      "Auditor",
+      "Military Officer",
+      "Project Manager",
+      "Database Administrator",
+      "Legal Professional"
+    ],
+    "study_habits": [
+      "Methodical and organized approach to learning",
+      "Excel at memorization and following procedures",
+      "Prefer clear structure and expectations",
+      "May resist unconventional teaching methods"
+    ],
+    "hobbies": ["Organizing", "Traditional crafts", "Historical research", "Collecting", "Home improvement"],
+    "famous_people": ["George Washington", "Warren Buffett", "Angela Merkel", "Denzel Washington"],
+    "growth_tips": [
+      "Be open to new methods even if they're unconventional",
+      "Consider others' feelings in your direct communication",
+      "Embrace change as an opportunity, not a threat",
+      "Balance duty with spontaneity and fun"
+    ]
+  },
+  "ISFJ": {
+    "title": "The Defender",
+    "description": "Very dedicated and warm protectors, always ready to defend their loved ones. ISFJs are caring and reliable individuals who value harmony and tradition.",
+    "percentage": "9-14% of population",
+    "strengths": ["Supportive", "Reliable", "Patient", "Practical", "Observant"],
+    "weaknesses": ["Overly humble", "Take things personally", "Repress feelings", "Reluctant to change"],
+    "careers": [
+      "Nurse",
+      "Teacher",
+      "Social Worker",
+      "Office Manager",
+      "Interior Designer",
+      "Librarian"
+    ],
+    "study_habits": [
+      "Detail-oriented and thorough",
+      "Excel at practical, hands-on learning",
+      "Prefer structured environments with clear expectations",
+      "May need encouragement to share ideas"
+    ],
+    "hobbies": ["Caring for others", "Cooking", "Gardening", "Crafts", "Volunteering"],
+    "famous_people": ["Mother Teresa", "Kate Middleton", "Rosa Parks", "Beyoncé"],
+    "growth_tips": [
+      "Learn to say no without feeling guilty",
+      "Express your needs instead of always putting others first",
+      "Accept recognition for your contributions",
+      "Be more open to change and new experiences"
+    ]
+  },
+  "ESTJ": {
+    "title": "The Executive",
+    "description": "Excellent administrators who excel at managing people and processes. ESTJs are organized, decisive, and committed to upholding traditions and order.",
+    "percentage": "8-12% of population",
+    "strengths": ["Dedicated", "Strong-willed", "Honest", "Loyal", "Organized"],
+    "weaknesses": ["Inflexible", "Uncomfortable with unconventional situations", "Judgmental", "Too focused on status"],
+    "careers": [
+      "Operations Manager",
+      "Business Administrator",
+      "Military Officer",
+      "Judge",
+      "Financial Officer",
+      "School Principal"
+    ],
+    "study_habits": [
+      "Goal-oriented and deadline-focused",
+      "Excel at organizing study groups and projects",
+      "Prefer traditional, proven learning methods",
+      "May struggle with abstract or theoretical concepts"
+    ],
+    "hobbies": ["Leadership activities", "Community service", "Sports", "Home organization", "Traditional games"],
+    "famous_people": ["Judge Judy", "John D. Rockefeller", "Frank Sinatra", "Michelle Obama"],
+    "growth_tips": [
+      "Be flexible when situations don't go according to plan",
+      "Consider feelings and values, not just facts and efficiency",
+      "Listen to alternative viewpoints before deciding",
+      "Balance work with relaxation and spontaneity"
+    ]
+  },
+  "ESFJ": {
+    "title": "The Consul",
+    "description": "Caring, social, and popular people who are always eager to help. ESFJs are warm-hearted organizers who value harmony and tradition in their communities.",
+    "percentage": "9-13% of population",
+    "strengths": ["Strong practical skills", "Strong sense of duty", "Loyal", "Sensitive", "Warm"],
+    "weaknesses": ["Worried about social status", "Inflexible", "Reluctant to innovate", "Needy"],
+    "careers": [
+      "Event Coordinator",
+      "Nurse",
+      "Office Manager",
+      "Social Worker",
+      "Public Relations",
+      "Teacher"
+    ],
+    "study_habits": [
+      "Excel in collaborative learning environments",
+      "Prefer structured courses with clear expectations",
+      "Motivated by helping and connecting with others",
+      "May need external validation and feedback"
+    ],
+    "hobbies": ["Hosting events", "Volunteering", "Party planning", "Cooking for others", "Community activities"],
+    "famous_people": ["Taylor Swift", "Jennifer Garner", "Sally Field", "Danny Glover"],
+    "growth_tips": [
+      "Don't base your self-worth on others' opinions",
+      "Be open to new ideas even if they challenge tradition",
+      "Focus on your own needs, not just pleasing others",
+      "Accept that you can't make everyone happy"
+    ]
+  },
+  "ISTP": {
+    "title": "The Virtuoso",
+    "description": "Bold and practical experimenters who master tools and techniques. ISTPs are efficient problem-solvers who enjoy understanding how things work.",
+    "percentage": "4-6% of population",
+    "strengths": ["Optimistic", "Energetic", "Creative", "Practical", "Spontaneous"],
+    "weaknesses": ["Stubborn", "Insensitive", "Private", "Easily bored", "Risk-prone"],
+    "careers": [
+      "Mechanic",
+      "Engineer",
+      "Pilot",
+      "Paramedic",
+      "Forensic Scientist",
+      "Software Developer"
+    ],
+    "study_habits": [
+      "Learn best through hands-on experience",
+      "Excel at understanding systems and mechanisms",
+      "May struggle with theoretical or abstract concepts",
+      "Need practical application to stay engaged"
+    ],
+    "hobbies": ["Working with tools", "Sports", "Video games", "Motorcycling", "Troubleshooting"],
+    "famous_people": ["Clint Eastwood", "Bear Grylls", "Michael Jordan", "Scarlett Johansson"],
+    "growth_tips": [
+      "Consider long-term consequences, not just immediate action",
+      "Express your thoughts and feelings to others",
+      "Commit to finishing projects before moving to new ones",
+      "Be patient with people who aren't as practical"
+    ]
+  },
+  "ISFP": {
+    "title": "The Adventurer",
+    "description": "Flexible and charming artists who are always ready to explore and experience something new. ISFPs live in the present moment and express themselves creatively.",
+    "percentage": "5-9% of population",
+    "strengths": ["Charming", "Sensitive", "Imaginative", "Passionate", "Curious"],
+    "weaknesses": ["Fiercely independent", "Unpredictable", "Easily stressed", "Overly competitive", "Fluctuating self-esteem"],
+    "careers": [
+      "Artist",
+      "Musician",
+      "Designer",
+      "Chef",
+      "Veterinarian",
+      "Physical Therapist"
+    ],
+    "study_habits": [
+      "Excel in creative and artistic subjects",
+      "Learn best through hands-on, experiential methods",
+      "May struggle with rigid structure and deadlines",
+      "Need personal connection to material"
+    ],
+    "hobbies": ["Art", "Music", "Nature activities", "Cooking", "Photography"],
+    "famous_people": ["Michael Jackson", "Britney Spears", "Lana Del Rey", "Frida Kahlo"],
+    "growth_tips": [
+      "Develop long-term goals alongside living in the moment",
+      "Don't take criticism of your work as criticism of yourself",
+      "Practice follow-through on commitments",
+      "Build confidence in your unique talents"
+    ]
+  },
+  "ESTP": {
+    "title": "The Entrepreneur",
+    "description": "Smart, energetic, and perceptive people who truly enjoy living on the edge. ESTPs are action-oriented problem-solvers who thrive in dynamic environments.",
+    "percentage": "4-5% of population",
+    "strengths": ["Bold", "Rational", "Practical", "Original", "Perceptive"],
+    "weaknesses": ["Insensitive", "Impatient", "Risk-prone", "Unstructured", "Difficulty with long-term planning"],
+    "careers": [
+      "Entrepreneur",
+      "Sales Manager",
+      "Paramedic",
+      "Detective",
+      "Stock Trader",
+      "Marketing Director"
+    ],
+    "study_habits": [
+      "Learn by doing and taking action",
+      "Excel in high-energy, competitive environments",
+      "May struggle with theoretical or abstract concepts",
+      "Need practical application and immediate results"
+    ],
+    "hobbies": ["Extreme sports", "Entrepreneurship", "Travel", "Social activities", "Competition"],
+    "famous_people": ["Donald Trump", "Madonna", "Eddie Murphy", "Bruce Willis"],
+    "growth_tips": [
+      "Think before you act - consider long-term consequences",
+      "Be sensitive to others' feelings in your directness",
+      "Develop patience for planning and preparation",
+      "Balance thrill-seeking with stability"
+    ]
+  },
+  "ESFP": {
+    "title": "The Entertainer",
+    "description": "Spontaneous, energetic, and enthusiastic people who love life and all its possibilities. ESFPs are natural performers who bring joy and excitement wherever they go.",
+    "percentage": "4-9% of population",
+    "strengths": ["Bold", "Original", "Practical", "Observant", "Excellent people skills"],
+    "weaknesses": ["Sensitive", "Conflict-averse", "Easily bored", "Poor long-term focus", "Difficulty with abstract thinking"],
+    "careers": [
+      "Performer",
+      "Event Planner",
+      "Flight Attendant",
+      "Sales Representative",
+      "Fitness Trainer",
+      "Public Relations"
+    ],
+    "study_habits": [
+      "Learn best through active, social experiences",
+      "Excel in performance and presentation-based assessments",
+      "May struggle with solitary study and abstract theory",
+      "Need variety and stimulation to stay engaged"
+    ],
+    "hobbies": ["Performing", "Socializing", "Fashion", "Dancing", "Travel"],
+    "famous_people": ["Marilyn Monroe", "Elvis Presley", "Jamie Oliver", "Serena Williams"],
+    "growth_tips": [
+      "Develop skills in planning and follow-through",
+      "Balance living in the moment with preparing for the future",
+      "Face conflicts directly instead of avoiding them",
+      "Build discipline for tasks that aren't immediately fun"
+    ]
+  }
+}

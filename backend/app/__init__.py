@@ -68,8 +68,9 @@ def create_app():
         raise
     
     # Register blueprints (routes)
-    from app.routes import auth
+    from app.routes import auth, questionnaire
     app.register_blueprint(auth.bp)
+    app.register_blueprint(questionnaire.bp)
     
     # Root route
     @app.route('/')
