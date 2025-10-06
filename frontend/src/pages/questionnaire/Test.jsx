@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { questionnaireService } from "../../services/questionnaireService";
 import QuestionCard from "../../components/questionnaire/QuestionCard";
 import ProgressBar from "../../components/questionnaire/ProgressBar";
+import Navbar from "../../components/shared/Navbar";
 
 export default function QuestionnaireTest() {
   const [questions, setQuestions] = useState([]);
@@ -93,8 +94,10 @@ export default function QuestionnaireTest() {
   const answeredCount = Object.keys(answers).length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500 py-6 px-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500">
+      <Navbar />
+
+      <div className="max-w-4xl mx-auto px-4 py-6">
         {/* Header - Compact with Exit button */}
         <div className="flex items-center justify-between mb-6">
           <button

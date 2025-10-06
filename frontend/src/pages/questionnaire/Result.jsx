@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { questionnaireService } from '../../services/questionnaireService';
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { questionnaireService } from "../../services/questionnaireService";
+import Navbar from "../../components/shared/Navbar";
+import { generateQuestionnairePDF } from "../../utils/pdfGenerator";
 
 export default function QuestionnaireResult() {
   const { id } = useParams();
@@ -19,7 +21,7 @@ export default function QuestionnaireResult() {
       setResult(data);
       setLoading(false);
     } catch {
-      setError('Failed to load results');
+      setError("Failed to load results");
       setLoading(false);
     }
   };
@@ -41,7 +43,7 @@ export default function QuestionnaireResult() {
         <div className="glass-card p-8 max-w-md text-center">
           <p className="text-white text-xl mb-4">Failed to load results</p>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="btn-gradient px-6 py-3"
           >
             Back to Home
@@ -57,19 +59,21 @@ export default function QuestionnaireResult() {
 
   // MBTI letter colors
   const letterColors = {
-    I: 'from-blue-500 to-blue-600',
-    E: 'from-red-500 to-red-600',
-    N: 'from-purple-500 to-purple-600',
-    S: 'from-yellow-500 to-yellow-600',
-    T: 'from-green-500 to-green-600',
-    F: 'from-pink-500 to-pink-600',
-    J: 'from-orange-500 to-orange-600',
-    P: 'from-cyan-500 to-cyan-600'
+    I: "from-blue-500 to-blue-600",
+    E: "from-red-500 to-red-600",
+    N: "from-purple-500 to-purple-600",
+    S: "from-yellow-500 to-yellow-600",
+    T: "from-green-500 to-green-600",
+    F: "from-pink-500 to-pink-600",
+    J: "from-orange-500 to-orange-600",
+    P: "from-cyan-500 to-cyan-600",
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500 py-8 px-4">
-      <div className="max-w-5xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500">
+      <Navbar showBackButton={true} backTo="/" />
+
+      <div className="max-w-5xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -83,10 +87,10 @@ export default function QuestionnaireResult() {
         {/* MBTI Type Card */}
         <div className="glass-card mb-8 text-center">
           <h2 className="text-white/80 text-lg mb-4">You are an</h2>
-          
+
           {/* MBTI Letters */}
           <div className="flex justify-center gap-3 mb-6">
-            {mbti.split('').map((letter, idx) => (
+            {mbti.split("").map((letter, idx) => (
               <div
                 key={idx}
                 className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${letterColors[letter]} flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform`}
@@ -118,24 +122,28 @@ export default function QuestionnaireResult() {
             {Object.entries(confidence).map(([dimension, score]) => {
               const percentage = Math.round(score * 100);
               const labels = {
-                IE: mbti[0] === 'I' ? 'Introversion' : 'Extraversion',
-                NS: mbti[1] === 'N' ? 'Intuition' : 'Sensing',
-                TF: mbti[2] === 'T' ? 'Thinking' : 'Feeling',
-                JP: mbti[3] === 'J' ? 'Judging' : 'Perceiving'
+                IE: mbti[0] === "I" ? "Introversion" : "Extraversion",
+                NS: mbti[1] === "N" ? "Intuition" : "Sensing",
+                TF: mbti[2] === "T" ? "Thinking" : "Feeling",
+                JP: mbti[3] === "J" ? "Judging" : "Perceiving",
               };
-              
+
               return (
                 <div key={dimension}>
                   <div className="flex justify-between mb-2">
-                    <span className="text-white font-semibold">{labels[dimension]}</span>
+                    <span className="text-white font-semibold">
+                      {labels[dimension]}
+                    </span>
                     <span className="text-white font-bold">{percentage}%</span>
                   </div>
                   <div className="w-full h-4 bg-gray-900/50 rounded-full overflow-hidden border border-white/30">
                     <div
                       className={`h-full bg-gradient-to-r ${
-                        percentage >= 80 ? 'from-green-400 to-green-500' :
-                        percentage >= 60 ? 'from-blue-400 to-blue-500' :
-                        'from-yellow-400 to-yellow-500'
+                        percentage >= 80
+                          ? "from-green-400 to-green-500"
+                          : percentage >= 60
+                          ? "from-blue-400 to-blue-500"
+                          : "from-yellow-400 to-yellow-500"
                       } transition-all duration-1000`}
                       style={{ width: `${percentage}%` }}
                     ></div>
@@ -180,7 +188,9 @@ export default function QuestionnaireResult() {
 
         {/* Career Suggestions */}
         <div className="glass-card mb-8">
-          <h3 className="text-2xl font-bold text-white mb-4">Recommended Careers</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Recommended Careers
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {insights.careers.map((career, idx) => (
               <div
@@ -204,7 +214,10 @@ export default function QuestionnaireResult() {
               {insights.compatibility.best_matches.map((match) => {
                 const compat = insights.compatibility.compatibility[match];
                 return (
-                  <div key={match} className="p-4 rounded-lg bg-white/10 border border-white/20">
+                  <div
+                    key={match}
+                    className="p-4 rounded-lg bg-white/10 border border-white/20"
+                  >
                     <div className="flex items-center justify-between mb-2">
                       <h4 className="text-xl font-bold text-white">{match}</h4>
                       <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 font-semibold">
@@ -213,7 +226,8 @@ export default function QuestionnaireResult() {
                     </div>
                     <p className="text-white/90 mb-2">{compat.why}</p>
                     <p className="text-white/70 text-sm">
-                      <span className="font-semibold">Challenge:</span> {compat.challenges}
+                      <span className="font-semibold">Challenge:</span>{" "}
+                      {compat.challenges}
                     </p>
                   </div>
                 );
@@ -224,7 +238,9 @@ export default function QuestionnaireResult() {
 
         {/* Growth Tips */}
         <div className="glass-card mb-8">
-          <h3 className="text-2xl font-bold text-white mb-4">Personal Growth Tips</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Personal Growth Tips
+          </h3>
           <ul className="space-y-3">
             {insights.growth_tips.map((tip, idx) => (
               <li key={idx} className="flex items-start gap-3">
@@ -255,19 +271,19 @@ export default function QuestionnaireResult() {
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="px-8 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold transition border border-white/30"
           >
             Back to Home
           </button>
           <button
-            onClick={() => navigate('/questionnaire/test')}
+            onClick={() => navigate("/questionnaire/test")}
             className="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold transition shadow-lg"
           >
             Take Test Again
           </button>
           <button
-            onClick={() => alert('PDF export coming next')}
+            onClick={() => generateQuestionnairePDF(prediction, insights)}
             className="px-8 py-3 rounded-lg btn-gradient"
           >
             Download PDF Report
