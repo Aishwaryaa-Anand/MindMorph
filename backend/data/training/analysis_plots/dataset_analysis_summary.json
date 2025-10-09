@@ -1,0 +1,50 @@
+{
+  "dataset_info": {
+    "total_people": 2574,
+    "train_size": 1801,
+    "val_size": 386,
+    "test_size": 387
+  },
+  "text_statistics": {
+    "min_length": 820,
+    "max_length": 9992,
+    "mean_length": 7988.843434343435,
+    "median_length": 8464.0
+  },
+  "mbti_distribution": {
+    "ENFJ": 190,
+    "ENFP": 200,
+    "ENTJ": 200,
+    "ENTP": 200,
+    "ESFJ": 42,
+    "ESFP": 48,
+    "ESTJ": 39,
+    "ESTP": 89,
+    "INFJ": 200,
+    "INFP": 200,
+    "INTJ": 200,
+    "INTP": 200,
+    "ISFJ": 166,
+    "ISFP": 200,
+    "ISTJ": 200,
+    "ISTP": 200
+  },
+  "dimension_distributions": {
+    "I/E": {
+      "I": 1566,
+      "E": 1008
+    },
+    "N/S": {
+      "N": 1590,
+      "S": 984
+    },
+    "T/F": {
+      "T": 1328,
+      "F": 1246
+    },
+    "J/P": {
+      "J": 1237,
+      "P": 1337
+    }
+  }
+}

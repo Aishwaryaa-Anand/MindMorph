@@ -6,6 +6,10 @@ import Signup from "./components/auth/Signup";
 import Home from "./pages/Home";
 import QuestionnaireTest from "./pages/questionnaire/Test";
 import QuestionnaireResult from "./pages/questionnaire/Result";
+import TextAnalyze from "./pages/text/Analyze";
+import TextResult from "./pages/text/Result";
+import TwitterAnalyze from "./pages/twitter/Analyze";
+import TwitterResult from "./pages/twitter/Result";
 
 function App() {
   return (
@@ -40,6 +44,42 @@ function App() {
             element={
               <ProtectedRoute>
                 <QuestionnaireResult />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/text/analyze"
+            element={
+              <ProtectedRoute>
+                <TextAnalyze />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/text/result/:id"
+            element={
+              <ProtectedRoute>
+                <TextResult />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/twitter/analyze"
+            element={
+              <ProtectedRoute>
+                <TwitterAnalyze />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/twitter/result/:id"
+            element={
+              <ProtectedRoute>
+                <TwitterResult />
               </ProtectedRoute>
             }
           />

@@ -1,0 +1,29 @@
+import axios from 'axios';
+
+const API_URL = 'http://localhost:5000/api/text';
+
+export const textService = {
+  // Predict MBTI from text
+  predict: async (text) => {
+    const response = await axios.post(`${API_URL}/predict`, { text });
+    return response.data;
+  },
+
+  // Get latest text prediction
+  getLatestResult: async () => {
+    const response = await axios.get(`${API_URL}/results`);
+    return response.data;
+  },
+
+  // Get specific result by ID
+  getResultById: async (id) => {
+    const response = await axios.get(`${API_URL}/result/${id}`);
+    return response.data;
+  },
+
+  // Get prediction history
+  getHistory: async () => {
+    const response = await axios.get(`${API_URL}/history`);
+    return response.data;
+  }
+};

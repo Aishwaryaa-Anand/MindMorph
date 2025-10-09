@@ -68,9 +68,11 @@ def create_app():
         raise
     
     # Register blueprints (routes)
-    from app.routes import auth, questionnaire
+    from app.routes import auth, questionnaire, text, twitter
     app.register_blueprint(auth.bp)
     app.register_blueprint(questionnaire.bp)
+    app.register_blueprint(text.bp)
+    app.register_blueprint(twitter.bp)
     
     # Root route
     @app.route('/')
