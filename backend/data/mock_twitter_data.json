@@ -28,8 +28,8 @@
       "If you're trying to create a company, it's like baking a cake. You have to have all the ingredients in the right proportion."
     ]
   },
-  "BillGates": {
-    "username": "BillGates",
+  "billgates": {
+    "username": "billgates",
     "displayName": "Bill Gates",
     "verified": true,
     "followers": "60M",
@@ -115,8 +115,8 @@
       "What excites me most is seeing how our products impact billions of people around the world every day."
     ]
   },
-  "BarackObama": {
-    "username": "BarackObama",
+  "barackobama": {
+    "username": "barackobama",
     "displayName": "Barack Obama",
     "verified": true,
     "followers": "130M",

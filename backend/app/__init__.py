@@ -68,11 +68,12 @@ def create_app():
         raise
     
     # Register blueprints (routes)
-    from app.routes import auth, questionnaire, text, twitter
+    from app.routes import auth, questionnaire, text, twitter, twitter_mock_api
     app.register_blueprint(auth.bp)
     app.register_blueprint(questionnaire.bp)
     app.register_blueprint(text.bp)
     app.register_blueprint(twitter.bp)
+    app.register_blueprint(twitter_mock_api.bp)
     
     # Root route
     @app.route('/')
