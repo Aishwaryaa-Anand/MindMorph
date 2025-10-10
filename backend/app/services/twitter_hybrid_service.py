@@ -1,57 +1,97 @@
 from datetime import datetime
 from bson import ObjectId
 from app.ml_models.text_classifier import text_classifier
+from app.services.twitter_real_api_client import twitter_real_client
 from app.services.twitter_mock_api_client import twitter_mock_client
-import requests
+import os
 
-class TwitterService:
-    """Service for Twitter-based MBTI predictions using Mock API"""
+# Toggle: Set to True to use Real API, False for Mock API
+USE_REAL_API = os.getenv('USE_REAL_TWITTER_API', 'false').lower() == 'true'
+
+class TwitterHybridService:
+    """
+    Hybrid Twitter service - tries Real API first, falls back to Mock
+    """
     
     def __init__(self, db):
         self.db = db
         self.predictions_collection = db.twitter_predictions
+        
+        # Print which mode we're in
+        if USE_REAL_API and twitter_real_client.is_available():
+            print("🔵 Twitter Module: REAL API MODE (Limited to 100 reads/month)")
+            print("⚠️  WARNING: Each analysis uses 20 tweets, so limit usage!")
+        else:
+            print("🟢 Twitter Module: MOCK API MODE (Unlimited)")
     
     def analyze_twitter(self, username, user_id):
-        """
-        Analyze Twitter profile and predict MBTI using Mock API
-        """
+        """Analyze Twitter profile - tries Real API first, falls back to Mock"""
         try:
-            # Remove @ if present
             username = username.lstrip('@').lower()
             
-            print(f"\n{'='*60}")
-            print(f"Starting Twitter analysis for @{username}")
-            print(f"{'='*60}")
+            tweets = None
+            profile = None
+            source = None
             
-            # Fetch tweets via Mock API
-            tweets = twitter_mock_client.get_user_tweets(username, max_tweets=20)
+            # Try Real API first (if enabled)
+            if USE_REAL_API and twitter_real_client.is_available():
+                print(f"\n{'='*60}")
+                print(f"🔵 Attempting REAL Twitter API for @{username}")
+                print(f"{'='*60}")
+                
+                tweets = twitter_real_client.get_user_tweets(username, max_tweets=20)
+                
+                if tweets and len(tweets) >= 5:
+                    profile = twitter_real_client.get_user_profile(username)
+                    source = 'twitter_api_real'
+                    print(f"✅ SUCCESS: Using Real Twitter API")
+                else:
+                    print(f"⚠️  Real API returned insufficient data, falling back to Mock")
             
-            if not tweets or len(tweets) < 5:
-                return None, f'Username @{username} not found or has too few tweets.'
+            # Fallback to Mock API
+            if not tweets:
+                print(f"\n{'='*60}")
+                print(f"🟢 Using Mock API for @{username}")
+                print(f"{'='*60}")
+                
+                tweets = twitter_mock_client.get_user_tweets(username, max_tweets=20)
+                
+                if tweets and len(tweets) >= 5:
+                    profile = twitter_mock_client.get_user_profile(username)
+                    source = 'mock_api'
+                else:
+                    return None, f'Username @{username} not found'
+                
+            # Store individual tweets (NEW)
+            tweet_objects = []
+            for i, tweet_text in enumerate(tweets):
+                tweet_objects.append({
+                    'index': i + 1,
+                    'text': tweet_text,
+                    'length': len(tweet_text)
+                })
+
             
-            # Get profile info
-            profile = twitter_mock_client.get_user_profile(username)
-            
-            # Combine tweets into one text
+            # Combine tweets and predict
             combined_text = ' '.join(tweets)
             
             if len(combined_text) < 100:
                 return None, 'Not enough tweet content for analysis.'
             
-            # Predict using text classifier
             print(f"\n🤖 Analyzing {len(combined_text)} characters with ML model...")
             mbti_type, confidence, keywords = text_classifier.predict(combined_text)
             
-            # Save prediction
+            # Save prediction WITH TWEETS (UPDATED)
             prediction = {
                 'userId': ObjectId(user_id),
                 'username': username,
                 'mbtiType': mbti_type,
                 'confidence': confidence,
                 'tweetCount': len(tweets),
+                'tweets': tweet_objects,  # NEW: Store actual tweets
                 'totalCharacters': len(combined_text),
                 'keywords': keywords,
-                'source': 'mock_api',
+                'source': source,
                 'profileInfo': profile,
                 'timestamp': datetime.utcnow(),
                 'ml_enhanced': True
@@ -60,6 +100,7 @@ class TwitterService:
             result = self.predictions_collection.insert_one(prediction)
             
             print(f"✅ Analysis complete: {mbti_type}")
+            print(f"   Source: {source}")
             print(f"{'='*60}\n")
             
             return {
@@ -69,12 +110,10 @@ class TwitterService:
                 'confidence': confidence,
                 'tweetCount': len(tweets),
                 'keywords': keywords,
-                'source': 'mock_api',
+                'source': source,
                 'profileInfo': profile
             }, None
             
-        except ValueError as e:
-            return None, str(e)
         except Exception as e:
             import traceback
             traceback.print_exc()
@@ -130,14 +169,5 @@ class TwitterService:
             return []
     
     def get_available_usernames(self):
-        """Get list of available usernames from mock API"""
-        try:
-            response = requests.get('http://localhost:5000/api/mock/twitter/available-users')
-            if response.status_code == 200:
-                users = response.json()['users']
-                return [user['username'] for user in users]
-        except:
-            pass
-        
-        # Fallback to hardcoded list
+        """Get available mock usernames"""
         return ['elonmusk', 'billgates', 'naval', 'sundarpichai', 'barackobama']

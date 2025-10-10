@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { questionnaireService } from "../../services/questionnaireService";
 import Navbar from "../../components/shared/Navbar";
 import { generateQuestionnairePDF } from "../../utils/pdfGenerator";
+import Footer from '../../components/shared/Footer';
 
 export default function QuestionnaireResult() {
   const { id } = useParams();
@@ -290,6 +291,7 @@ export default function QuestionnaireResult() {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

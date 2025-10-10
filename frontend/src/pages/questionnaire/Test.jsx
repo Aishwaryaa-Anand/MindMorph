@@ -4,6 +4,9 @@ import { questionnaireService } from "../../services/questionnaireService";
 import QuestionCard from "../../components/questionnaire/QuestionCard";
 import ProgressBar from "../../components/questionnaire/ProgressBar";
 import Navbar from "../../components/shared/Navbar";
+import Footer from '../../components/shared/Footer';
+import toast from 'react-hot-toast';
+
 
 export default function QuestionnaireTest() {
   const [questions, setQuestions] = useState([]);
@@ -68,6 +71,8 @@ export default function QuestionnaireTest() {
       }));
 
       const result = await questionnaireService.predict(formattedAnswers);
+      toast.success('Your answers have been submitted successfully!');
+      setSubmitting(false);
 
       // Navigate to results page
       navigate(`/questionnaire/result/${result.predictionId}`);
@@ -94,8 +99,8 @@ export default function QuestionnaireTest() {
   const answeredCount = Object.keys(answers).length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-purple-500 to-blue-500">
-      <Navbar />
+    <div className="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-600">
+      <Navbar showBackButton={true} backTo="/" />
 
       <div className="max-w-4xl mx-auto px-4 py-6">
         {/* Header - Compact with Exit button */}
@@ -147,13 +152,11 @@ export default function QuestionnaireTest() {
           >
             ← Back
           </button>
-
           <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-900/50 border border-white/30">
             <span className="text-white font-semibold">{answeredCount}</span>
             <span className="text-white/80">/</span>
             <span className="text-white/80">{questions.length}</span>
           </div>
-
           {!isLastQuestion ? (
             <button
               onClick={handleNext}
@@ -166,9 +169,16 @@ export default function QuestionnaireTest() {
             <button
               onClick={handleSubmit}
               disabled={!allAnswered || submitting}
-              className="px-6 py-2.5 rounded-lg bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-bold transition shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2.5 rounded-lg bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-bold transition shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
             >
-              {submitting ? "Processing..." : "Get Results"}
+              {submitting ? (
+                <>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                  Processing...
+                </>
+              ) : (
+                "Get Results"
+              )}
             </button>
           )}
         </div>
@@ -182,6 +192,7 @@ export default function QuestionnaireTest() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

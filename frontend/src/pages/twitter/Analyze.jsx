@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Navbar from '../../components/shared/Navbar';
-import { twitterService } from '../../services/twitterService';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Navbar from "../../components/shared/Navbar";
+import { twitterService } from "../../services/twitterService";
+import Footer from '../../components/shared/Footer';
+import toast from 'react-hot-toast';
 
 export default function TwitterAnalyze() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [availableUsernames, setAvailableUsernames] = useState([]);
   const navigate = useNavigate();
 
@@ -19,33 +21,38 @@ export default function TwitterAnalyze() {
       const data = await twitterService.getAvailableUsernames();
       setAvailableUsernames(data.usernames);
     } catch (err) {
-      console.error('Failed to load usernames:', err);
+      console.error("Failed to load usernames:", err);
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!username.trim()) {
-      setError('Please enter a Twitter username');
+      setError("Please enter a Twitter username");
       return;
     }
 
     setSubmitting(true);
-    setError('');
+    setError("");
 
     try {
       const result = await twitterService.analyze(username);
+      toast.success('Analysis done successfully!');
+      setSubmitting(false);
+      // Navigate to results page
       navigate(`/twitter/result/${result.predictionId}`);
     } catch (err) {
-      setError(err.response?.data?.error || 'Analysis failed. Please try again.');
+      setError(
+        err.response?.data?.error || "Analysis failed. Please try again."
+      );
       setSubmitting(false);
     }
   };
 
   const handleUsernameClick = (user) => {
     setUsername(user);
-    setError('');
+    setError("");
   };
 
   return (
@@ -67,17 +74,25 @@ export default function TwitterAnalyze() {
         <div className="glass-card mb-6">
           <h3 className="text-xl font-bold text-white mb-3">🐦 How It Works</h3>
           <ul className="space-y-2 text-white/90">
-            <li>• Enter any Twitter username (with or without @)</li>
-            <li>• We analyze recent tweets using our 80% accuracy ML model</li>
-            <li>• Uses Nitter (free Twitter scraper) </li>
-            <li>• BERT + Ensemble technology </li>
+            <li>• Enter any Twitter username (public accounts)</li>
+            <li>• System fetches user profile and recent tweets</li>
+            <li>• Analyzes up to 20 tweets </li>
+            <li>• BERT + Ensemble technology as text analysis</li>
           </ul>
+
+          <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30">
+            <p className="text-white/90 text-sm">
+              <strong>Data Source:</strong> Automatically uses Real Twitter API
+              when available, seamlessly falls back to Mock API for demo
+              profiles. All tweets are stored for reference.
+            </p>
+          </div>
         </div>
 
         {/* Input Form */}
         <div className="glass-card mb-6">
           <h3 className="text-xl font-bold text-white mb-4">Enter Username</h3>
-          
+
           <form onSubmit={handleSubmit}>
             <div className="flex gap-3">
               <div className="flex-1">
@@ -95,7 +110,7 @@ export default function TwitterAnalyze() {
                   />
                 </div>
               </div>
-              
+
               <button
                 type="submit"
                 disabled={submitting || !username.trim()}
@@ -107,7 +122,7 @@ export default function TwitterAnalyze() {
                     Analyzing...
                   </span>
                 ) : (
-                  'Analyze'
+                  "Analyze"
                 )}
               </button>
             </div>
@@ -129,7 +144,7 @@ export default function TwitterAnalyze() {
             <p className="text-white/70 mb-4 text-sm">
               Click any username to analyze (uses mock data for demo)
             </p>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {availableUsernames.map((user) => (
                 <button
@@ -138,7 +153,8 @@ export default function TwitterAnalyze() {
                   disabled={submitting}
                   className="px-4 py-3 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition disabled:opacity-50 text-left"
                 >
-                  <span className="text-blue-300">@</span>{user}
+                  <span className="text-blue-300">@</span>
+                  {user}
                 </button>
               ))}
             </div>
@@ -146,12 +162,21 @@ export default function TwitterAnalyze() {
         )}
 
         {/* Info Footer */}
-        <div className="text-center mt-8">
-          <p className="text-white/60 text-sm">
-            💡 Note: Due to Twitter API costs, we use Nitter (free scraper) with mock data fallback
+        <div className="text-center mt-8 space-y-2">
+          <p className="text-white/70 text-sm">
+            📊 <strong>Analysis Method:</strong> BERT + CountVectorizer +
+            Linguistic Features
+          </p>
+          <p className="text-white/70 text-sm">
+            🎯 <strong>Model Accuracy:</strong> 80.36% (trained on 2,574
+            profiles)
+          </p>
+          <p className="text-white/60 text-xs">
+            Real Twitter API: Limited to 100 tweets/month • Mock API: Unlimited
           </p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

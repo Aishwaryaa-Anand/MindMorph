@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { twitterService } from '../../services/twitterService';
-import Navbar from '../../components/shared/Navbar';
-import { generateQuestionnairePDF } from '../../utils/pdfGenerator';
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { twitterService } from "../../services/twitterService";
+import Navbar from "../../components/shared/Navbar";
+import { generateQuestionnairePDF } from "../../utils/pdfGenerator";
+import Footer from '../../components/shared/Footer';
 
 export default function TwitterResult() {
   const { id } = useParams();
@@ -21,7 +22,7 @@ export default function TwitterResult() {
       setResult(data);
       setLoading(false);
     } catch {
-      setError('Failed to load results');
+      setError("Failed to load results");
       setLoading(false);
     }
   };
@@ -43,7 +44,7 @@ export default function TwitterResult() {
         <div className="glass-card p-8 max-w-md text-center">
           <p className="text-white text-xl mb-4">Failed to load results</p>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="btn-gradient px-6 py-3"
           >
             Back to Home
@@ -56,19 +57,19 @@ export default function TwitterResult() {
   const { prediction, insights } = result;
   const mbti = prediction.mbtiType;
   const confidence = prediction.confidence;
-//   const keywords = prediction.keywords || [];
+  //   const keywords = prediction.keywords || [];
   const profileInfo = prediction.profileInfo || {};
 
   // MBTI letter colors
   const letterColors = {
-    I: 'from-blue-500 to-blue-600',
-    E: 'from-red-500 to-red-600',
-    N: 'from-purple-500 to-purple-600',
-    S: 'from-yellow-500 to-yellow-600',
-    T: 'from-green-500 to-green-600',
-    F: 'from-pink-500 to-pink-600',
-    J: 'from-orange-500 to-orange-600',
-    P: 'from-cyan-500 to-cyan-600'
+    I: "from-blue-500 to-blue-600",
+    E: "from-red-500 to-red-600",
+    N: "from-purple-500 to-purple-600",
+    S: "from-yellow-500 to-yellow-600",
+    T: "from-green-500 to-green-600",
+    F: "from-pink-500 to-pink-600",
+    J: "from-orange-500 to-orange-600",
+    P: "from-cyan-500 to-cyan-600",
   };
 
   return (
@@ -112,11 +113,27 @@ export default function TwitterResult() {
               <div className="text-right">
                 <div className="px-4 py-2 rounded-lg bg-white/10 border border-white/20">
                   <p className="text-white/70 text-sm">Analyzed</p>
-                  <p className="text-white font-bold">{prediction.tweetCount} tweets</p>
+                  <p className="text-white font-bold">
+                    {prediction.tweetCount} tweets
+                  </p>
                 </div>
                 <div className="mt-2 px-4 py-2 rounded-lg bg-white/10 border border-white/20">
-                  <p className="text-white/70 text-sm">Source</p>
-                  <p className="text-white font-bold capitalize">{prediction.source}</p>
+                  <p className="text-white/70 text-sm">Data Source</p>
+                  <p className="text-white font-bold flex items-center gap-2">
+                    {prediction.source === "twitter_api_real" ? (
+                      <>
+                        <span className="text-green-400">●</span>
+                        <span>Real Twitter API</span>
+                      </>
+                    ) : prediction.source === "mock_api" ? (
+                      <>
+                        <span className="text-blue-400">●</span>
+                        <span>Mock API</span>
+                      </>
+                    ) : (
+                      "Unknown"
+                    )}
+                  </p>
                 </div>
               </div>
             </div>
@@ -129,7 +146,7 @@ export default function TwitterResult() {
 
           {/* MBTI Letters */}
           <div className="flex justify-center gap-3 mb-6">
-            {mbti.split('').map((letter, idx) => (
+            {mbti.split("").map((letter, idx) => (
               <div
                 key={idx}
                 className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${letterColors[letter]} flex items-center justify-center shadow-xl transform hover:scale-110 transition-transform`}
@@ -161,24 +178,28 @@ export default function TwitterResult() {
             {Object.entries(confidence).map(([dimension, score]) => {
               const percentage = Math.round(score * 100);
               const labels = {
-                IE: mbti[0] === 'I' ? 'Introversion' : 'Extraversion',
-                NS: mbti[1] === 'N' ? 'Intuition' : 'Sensing',
-                TF: mbti[2] === 'T' ? 'Thinking' : 'Feeling',
-                JP: mbti[3] === 'J' ? 'Judging' : 'Perceiving'
+                IE: mbti[0] === "I" ? "Introversion" : "Extraversion",
+                NS: mbti[1] === "N" ? "Intuition" : "Sensing",
+                TF: mbti[2] === "T" ? "Thinking" : "Feeling",
+                JP: mbti[3] === "J" ? "Judging" : "Perceiving",
               };
 
               return (
                 <div key={dimension}>
                   <div className="flex justify-between mb-2">
-                    <span className="text-white font-semibold">{labels[dimension]}</span>
+                    <span className="text-white font-semibold">
+                      {labels[dimension]}
+                    </span>
                     <span className="text-white font-bold">{percentage}%</span>
                   </div>
                   <div className="w-full h-4 bg-gray-900/50 rounded-full overflow-hidden border border-white/30">
                     <div
                       className={`h-full bg-gradient-to-r ${
-                        percentage >= 80 ? 'from-green-400 to-green-500' :
-                        percentage >= 60 ? 'from-blue-400 to-blue-500' :
-                        'from-yellow-400 to-yellow-500'
+                        percentage >= 80
+                          ? "from-green-400 to-green-500"
+                          : percentage >= 60
+                          ? "from-blue-400 to-blue-500"
+                          : "from-yellow-400 to-yellow-500"
                       } transition-all duration-1000`}
                       style={{ width: `${percentage}%` }}
                     ></div>
@@ -243,7 +264,9 @@ export default function TwitterResult() {
 
         {/* Career Suggestions */}
         <div className="glass-card mb-8">
-          <h3 className="text-2xl font-bold text-white mb-4">Recommended Careers</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Recommended Careers
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {insights.careers.map((career, idx) => (
               <div
@@ -279,7 +302,8 @@ export default function TwitterResult() {
                     </div>
                     <p className="text-white/90 mb-2">{compat.why}</p>
                     <p className="text-white/70 text-sm">
-                      <span className="font-semibold">Challenge:</span> {compat.challenges}
+                      <span className="font-semibold">Challenge:</span>{" "}
+                      {compat.challenges}
                     </p>
                   </div>
                 );
@@ -290,7 +314,9 @@ export default function TwitterResult() {
 
         {/* Growth Tips */}
         <div className="glass-card mb-8">
-          <h3 className="text-2xl font-bold text-white mb-4">Personal Growth Tips</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Personal Growth Tips
+          </h3>
           <ul className="space-y-3">
             {insights.growth_tips.map((tip, idx) => (
               <li key={idx} className="flex items-start gap-3">
@@ -318,16 +344,75 @@ export default function TwitterResult() {
           </div>
         </div>
 
+        {/* Analysis Info */}
+        <div className="glass-card mb-8">
+          <div className="flex items-start gap-3">
+            <span className="text-2xl">ℹ️</span>
+            <div>
+              <h4 className="text-white font-bold mb-2">Analysis Details</h4>
+              <ul className="text-white/80 text-sm space-y-1">
+                <li>
+                  • Analyzed {prediction.tweetCount} tweets (
+                  {prediction.totalCharacters.toLocaleString()} characters)
+                </li>
+                <li>• Model: BERT + Ensemble (80.36% accuracy)</li>
+                <li>
+                  • Source:{" "}
+                  {prediction.source === "twitter_api_real"
+                    ? "Live Twitter Data"
+                    : "Mock Profile Data"}
+                </li>
+                {/* <li>• Keywords extracted: {keywords.length} terms</li> */}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Stored Tweets Section - NEW */}
+        {prediction.tweets && prediction.tweets.length > 0 && (
+          <div className="glass-card mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Analyzed Tweets ({prediction.tweets.length})
+            </h3>
+            <p className="text-white/70 mb-4 text-sm">
+              These tweets were used for personality analysis and stored in our
+              database.
+            </p>
+            <div className="space-y-3 max-h-96 overflow-y-auto">
+              {prediction.tweets.map((tweet, idx) => (
+                <div
+                  key={idx}
+                  className="p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition"
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center text-white text-sm font-bold">
+                      {tweet.index}
+                    </span>
+                    <div className="flex-1">
+                      <p className="text-white/90 leading-relaxed">
+                        {tweet.text}
+                      </p>
+                      <p className="text-white/50 text-xs mt-2">
+                        {tweet.length} characters
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="px-8 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold transition border border-white/30"
           >
             Back to Home
           </button>
           <button
-            onClick={() => navigate('/twitter/analyze')}
+            onClick={() => navigate("/twitter/analyze")}
             className="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold transition shadow-lg"
           >
             Analyze Another Profile
@@ -340,6 +425,7 @@ export default function TwitterResult() {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

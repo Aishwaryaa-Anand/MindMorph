@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { textService } from '../../services/textService';
 import Navbar from '../../components/shared/Navbar';
-// import { generateTextAnalysisPDF } from '../../utils/textPdfGenerator';
 import { generateQuestionnairePDF } from "../../utils/pdfGenerator";
+import Footer from '../../components/shared/Footer';
 
 export default function TextResult() {
   const { id } = useParams();
@@ -303,6 +303,7 @@ export default function TextResult() {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

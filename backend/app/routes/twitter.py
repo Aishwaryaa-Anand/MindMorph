@@ -3,11 +3,14 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from app import db
 from app.services.twitter_service import TwitterService
 from app.services.mbti_service import MBTIService
+from app.services.twitter_hybrid_service import TwitterHybridService
+
 
 bp = Blueprint('twitter', __name__, url_prefix='/api/twitter')
 
 # Initialize services
-twitter_service = TwitterService(db)
+# twitter_service = TwitterService(db)
+twitter_service = TwitterHybridService(db)
 mbti_service = MBTIService()
 
 @bp.route('/analyze', methods=['POST'])

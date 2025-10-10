@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/shared/Navbar';
 import { textService } from '../../services/textService';
+import toast from 'react-hot-toast';
+import Footer from '../../components/shared/Footer';
 
 export default function TextAnalyze() {
   const [text, setText] = useState('');
@@ -20,9 +22,10 @@ export default function TextAnalyze() {
 
     try {
       const result = await textService.predict(text);
+      toast.success('Analysis complete!');
       navigate(`/text/result/${result.predictionId}`);
     } catch (err) {
-      setError(err.response?.data?.error || 'Analysis failed. Please try again.');
+      toast.error(err.response?.data?.error || 'Analysis failed. Please try again.');
       setSubmitting(false);
     }
   };
@@ -141,6 +144,7 @@ export default function TextAnalyze() {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

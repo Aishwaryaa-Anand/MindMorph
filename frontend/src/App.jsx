@@ -10,11 +10,16 @@ import TextAnalyze from "./pages/text/Analyze";
 import TextResult from "./pages/text/Result";
 import TwitterAnalyze from "./pages/twitter/Analyze";
 import TwitterResult from "./pages/twitter/Result";
+import QuestionnaireHistory from "./pages/questionnaire/History";
+import TextHistory from "./pages/text/History";
+import TwitterHistory from "./pages/twitter/History";
+import ToastProvider from './components/shared/ToastProvider';
 
 function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
+        <ToastProvider />
         <Routes>
           {/* Public Routes */}
           <Route path="/login" element={<Login />} />
@@ -49,6 +54,15 @@ function App() {
           />
 
           <Route
+            path="/questionnaire/history"
+            element={
+              <ProtectedRoute>
+                <QuestionnaireHistory />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
             path="/text/analyze"
             element={
               <ProtectedRoute>
@@ -67,6 +81,15 @@ function App() {
           />
 
           <Route
+            path="/text/history"
+            element={
+              <ProtectedRoute>
+                <TextHistory />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
             path="/twitter/analyze"
             element={
               <ProtectedRoute>
@@ -80,6 +103,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <TwitterResult />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/twitter/history"
+            element={
+              <ProtectedRoute>
+                <TwitterHistory />
               </ProtectedRoute>
             }
           />
