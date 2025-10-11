@@ -1,4 +1,4 @@
-# MindMorph - AI-Powered Personality Analysis Platform
+# 🧠 MindMorph - AI-Powered Personality Analysis Platform
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![React](https://img.shields.io/badge/React-18.0+-61DAFB.svg)
@@ -133,7 +133,7 @@ Final MBTI Type (e.g., INTJ)
 - Our approach: 80.36% accuracy (4 binary classifiers)
 - Improvement: +15-25 percentage points
 
---- -->
+
 
 ## 🛠️ Tech Stack
 
@@ -173,7 +173,7 @@ Final MBTI Type (e.g., INTJ)
 
 ## 📦 Installation & Setup
 
-### Prerequisites
+#### Prerequisites
 ```bash
 # Required Software
 - Python 3.10 or higher
@@ -185,11 +185,17 @@ Final MBTI Type (e.g., INTJ)
 python --version
 node --version
 mongod --version
-Step 1: Clone Repository
-bashgit clone https://github.com/yourusername/mindmorph.git
+```
+
+#### Step 1: Clone Repository
+```bash
+git clone https://github.com/yourusername/mindmorph.git
 cd mindmorph
-Step 2: Backend Setup
-bash# Navigate to backend
+```
+
+#### Step 2: Backend Setup
+```bash
+# Navigate to backend
 cd backend
 
 # Create virtual environment
@@ -206,7 +212,8 @@ pip install -r requirements.txt
 
 # Create .env file
 Create: backend/.env
-env# MongoDB Configuration
+env
+# MongoDB Configuration
 MONGODB_URI=mongodb://localhost:27017/mindmorph
 
 # JWT Secret (Generate a secure random string)
@@ -216,9 +223,8 @@ JWT_SECRET_KEY=your_super_secret_jwt_key_change_this
 TWITTER_BEARER_TOKEN=your_twitter_bearer_token_here
 USE_REAL_TWITTER_API=false
 
-# Flask Configuration
-FLASK_ENV=development
-bash# Start MongoDB (if not running)
+Start MongoDB (if not running)
+
 # Windows:
 mongod --dbpath C:\data\db
 # Mac/Linux:
@@ -227,9 +233,12 @@ sudo systemctl start mongodb
 # Run backend server
 python run.py
 
-# Backend should start on http://localhost:5000
-Step 3: Frontend Setup
-bash# Open new terminal
+Backend should start on http://localhost:5000
+```
+
+#### Step 3: Frontend Setup
+```bash
+# Open new terminal
 cd frontend
 
 # Install dependencies
@@ -238,16 +247,17 @@ npm install
 # Start development server
 npm start
 
-# Frontend opens at http://localhost:3000
-Step 4: Verify Installation
-
+Frontend opens at http://localhost:3000
+```
+#### Step 4: Verify Installation
+```bash
 Open browser: http://localhost:3000
 Create an account (Sign Up)
 Login with credentials
 You should see the home page with 3 modules
+```
 
-
-🚀 Usage Guide
+<!-- 🚀 Usage Guide
 1. Authentication
 Sign Up:
 
@@ -552,43 +562,43 @@ Project Information:
 Type: Final Year Bachelor's Project
 Domain: Machine Learning, Web Development
 Duration: 6 months
-Team Size: 3 members
+Team Size: 3 members -->
 
-Learning Outcomes:
+## Learning Outcomes:
 
-Full-stack web development
-Machine learning deployment
-RESTful API design
-Database optimization
-UI/UX design
-
-
-📚 References
-Datasets
-
-MBTI Dataset: Kaggle - MBTI Personality Types 500
-8,675 users with aggregated posts
-
-Libraries
-
-React: https://react.dev/
-Flask: https://flask.palletsprojects.com/
-scikit-learn: https://scikit-learn.org/
-Transformers: https://huggingface.co/
-
-MBTI Resources
-
-Myers & Briggs Foundation: https://www.myersbriggs.org/
-16Personalities: https://www.16personalities.com/
+- Full-stack web development
+- Machine learning deployment
+- RESTful API design
+- Database optimization
+- UI/UX design
 
 
-🤝 Contributing
+## 📚 References
+#### Datasets
+
+- MBTI Dataset: Kaggle - MBTI Personality Types 500
+- 8,675 users with aggregated posts
+
+#### Libraries
+
+- React: https://react.dev/
+- Flask: https://flask.palletsprojects.com/
+- scikit-learn: https://scikit-learn.org/
+- Transformers: https://huggingface.co/
+
+#### MBTI Resources
+
+- Myers & Briggs Foundation: https://www.myersbriggs.org/
+- 16Personalities: https://www.16personalities.com/
+
+
+## 🤝 Contributing
 This is an academic project. Feedback welcome!
-Contact:
 
-Email: [your-email@example.com]
-GitHub Issues: [repository-url]/issues
+## Contact:
+Email: [aishwarya.anand1125@gmail.com]
 
 
-📝 License
+
+## 📝 License
 Developed for academic purposes. Not licensed for commercial use.
