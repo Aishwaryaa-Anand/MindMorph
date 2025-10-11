@@ -44,7 +44,7 @@ A comprehensive web application that predicts MBTI personality types using advan
 
 ---
 
-## 🧠 Machine Learning Architecture
+<!-- ## 🧠 Machine Learning Architecture
 
 ### Model Overview
 
@@ -133,7 +133,7 @@ Final MBTI Type (e.g., INTJ)
 - Our approach: 80.36% accuracy (4 binary classifiers)
 - Improvement: +15-25 percentage points
 
----
+--- -->
 
 ## 🛠️ Tech Stack
 
