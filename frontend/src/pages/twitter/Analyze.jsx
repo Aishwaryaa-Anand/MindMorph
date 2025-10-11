@@ -161,7 +161,7 @@ export default function TwitterAnalyze() {
           </div>
         )}
 
-        {/* Info Footer */}
+        {/* Info Footer
         <div className="text-center mt-8 space-y-2">
           <p className="text-white/70 text-sm">
             📊 <strong>Analysis Method:</strong> BERT + CountVectorizer +
@@ -174,7 +174,7 @@ export default function TwitterAnalyze() {
           <p className="text-white/60 text-xs">
             Real Twitter API: Limited to 100 tweets/month • Mock API: Unlimited
           </p>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>
